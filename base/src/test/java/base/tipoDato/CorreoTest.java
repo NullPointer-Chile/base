@@ -11,7 +11,7 @@ import static org.junit.Assert.assertNull;
  */
 public class CorreoTest {
 
-    private static final Logger log = Logger.getLogger(CorreoTest.class);
+    private static final Logger LOG = Logger.getLogger(CorreoTest.class);
 
     public CorreoTest() {
     }
@@ -21,7 +21,7 @@ public class CorreoTest {
      */
     @Test
     public void test_crearCorreo_OK() {
-        log.info("Probando que se cree un correo electrónico válido");
+        LOG.info("Probando que se cree un correo electrónico válido");
         String correoValido = "guantanamena@gmail.com";
         Correo correo = new Correo(correoValido);
         assertEquals(correoValido, correo.toString());
@@ -32,7 +32,7 @@ public class CorreoTest {
      */
     @Test(expected = NullPointerException.class)
     public void test_crearCorreo_Nulo() {
-        log.info("Probando que falle la creación de un correo electrónico por no ingresar una dirección");
+        LOG.info("Probando que falle la creación de un correo electrónico por no ingresar una dirección");
         String correoNull = null;
         Correo correo = new Correo(correoNull);
         assertNull(correo);
@@ -43,7 +43,7 @@ public class CorreoTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void test_crearCorreo_invalido_sinNombre() {
-        log.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
+        LOG.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
         String correoInvalido = "@gmail.com";
         Correo correo = new Correo(correoInvalido);
     }
@@ -53,7 +53,7 @@ public class CorreoTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void test_crearCorreo_invalido_sinArroba() {
-        log.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
+        LOG.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
         String correoInvalido = "nombregmail.com";
         Correo correo = new Correo(correoInvalido);
     }
@@ -63,7 +63,7 @@ public class CorreoTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void test_crearCorreo_invalido_sinHosting() {
-        log.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
+        LOG.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
         String correoInvalido = "nombre@.com";
         Correo correo = new Correo(correoInvalido);
     }
@@ -73,7 +73,7 @@ public class CorreoTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void test_crearCorreo_invalido_sinDominio() {
-        log.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
+        LOG.info("Probando que falle la creación de un correo electrónico al ingresarlo con un formato inválido");
         String correoInvalido = "nombre@gmail";
         Correo correo = new Correo(correoInvalido);
     }

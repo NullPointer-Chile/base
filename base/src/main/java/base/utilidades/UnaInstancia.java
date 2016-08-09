@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
  */
 public class UnaInstancia extends Thread {
 
-    private static final Logger log = Logger.getLogger(UnaInstancia.class);
+    private static final Logger LOG = Logger.getLogger(UnaInstancia.class);
     public static final int PORT = 5500;
 
     private ServerSocket serverSocket = null;
@@ -27,7 +27,7 @@ public class UnaInstancia extends Thread {
                 clientSocket.close();
             }
         } catch (IOException ioe) {
-            log.info("Error al generar instancia: " + ioe);
+            LOG.info("Error al generar instancia: " + ioe);
         }
     }
 }

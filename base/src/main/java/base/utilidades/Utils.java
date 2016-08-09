@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  */
 public class Utils {
 
-    private static final Logger log = Logger.getLogger(Utils.class);
+    private static final Logger LOG = Logger.getLogger(Utils.class);
 
     /**
      * Evalua si ya existe otra instancia del programa en ejecución
@@ -52,11 +52,11 @@ public class Utils {
             in = (Utils.class).getClassLoader().getResourceAsStream("configuracion.properties");
             propiedades.load(in);
         } catch (IOException e) {
-            log.warn("Error al leer archivo configuracion.properties", e);
+            LOG.warn("Error al leer archivo configuracion.properties", e);
         }
 
         Global.ambiente = propiedades.getProperty("ambiente");
-        log.info("Ambiente: " + Global.ambiente);
+        LOG.info("Ambiente: " + Global.ambiente);
     }
 
     /**
