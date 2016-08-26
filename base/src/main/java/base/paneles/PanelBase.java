@@ -243,7 +243,7 @@ public class PanelBase extends JPanel {
      * @param columna índice de la columna de la tabla que se requiere ordenar
      * (comienza con el 0)
      */
-    public void centrarColumna(JTable tabla, int columna) {
+    public final void centrarColumna(JTable tabla, int columna) {
         if (tabla != null) {
             DefaultTableCellRenderer tcrCentrado = new DefaultTableCellRenderer();
             tcrCentrado.setHorizontalAlignment(SwingConstants.CENTER);
