@@ -34,7 +34,8 @@
             <version>2.1.0</version>
             <type>jar</type>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.swinglabs.swingx/swingx-all -->
+        
+        <!-- Utilidades para la vista Swing -->
         <dependency>
             <groupId>org.swinglabs.swingx</groupId>
             <artifactId>swingx-all</artifactId>
