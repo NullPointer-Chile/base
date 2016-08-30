@@ -121,7 +121,7 @@ public class PanelBase extends JPanel {
      * @param campo componente de entrada de texto a utilizar
      * @param texto texto a usar como placeholder
      */
-    protected void setPlaceholder(JTextComponent campo, String texto) {
+    protected final void setPlaceholder(JTextComponent campo, String texto) {
         PromptSupport.setPrompt(texto, campo);
         PromptSupport.setFontStyle(Font.BOLD, campo);
     }
